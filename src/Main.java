@@ -92,9 +92,32 @@ public class Main {
         int leng = arrayList.size();
         System.out.println("Enter the expense you need to search:\t");
         //Complete the method
+        //Used Linear Search
+        Scanner search= new Scanner(System.in);
+        int searchExpense=search.nextInt();
+        int result = 0;
+        for (int i=0;i<leng;i++) {
+        	if(arrayList.get(i)==searchExpense) {
+        		System.out.println("Your expense was found at index at " + i);
+        		result=1;
+        		break;
+        	}
+        	else {
+        		result=0;
+        	}
+        }
+        if(result==0) {
+        	System.out.println("Your expense was not found");
+        }
     }
     private static void sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
        //Complete the method. The expenses should be sorted in ascending order.
+       //Used Quick Sort
+        QuickSort test1 =new QuickSort();
+        test1.sort(arrayList,0,arrayList.size()-1);
+        System.out.println(arrayList);
+       
+        
     }
 }
